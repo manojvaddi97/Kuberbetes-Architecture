@@ -17,6 +17,17 @@ to start the container and it dies. This can be solved by Kubernetes, by default
 4. Docker alone is not used in productionas it doesn't support enterprise level features. on the other hand kubernetes is a eneterprise level container orchestration platform which is used in production environments.
 
 ## Architecture of Kubernetes
+Kubernetes is a cluster based architecture. In simple words kubernates operates on Master and worker nodes.
+In Kubernetes Master node is called "control plane", where as worker node is called "data plane".
+on a high level control plane is like a command center and all the application run on worker nodes i.e data plane. The requests go to worker nodes through control plane.
+
+### Data plane
+Data plane has three components, they are
+1. kubelet: which is responsible for maintaing the pod.
+2. container runtime: fundamental component which enables kubernetes to run containers effectively. Kuberenetes supports container runtimes like containerd, CRI-O etc.
+3. kube-proxy: kube-proxy is responsible for networking like assign IP addresses to pods, allow network communication to your pods from both inside and outside of your cluster.
+
+### Control plane
 
 
 
